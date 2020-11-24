@@ -5,6 +5,13 @@ clone_folder: c:\projects\tungsten
 platform: x64
 configuration: Release
 
+environment:
+  # update the vcpkg cache even if build fails
+  APPVEYOR_SAVE_CACHE_ON_ERROR: true
+
+cache:
+  - c:\Tools\vcpkg\installed
+  
 install:
 
 build:
