@@ -1,4 +1,4 @@
-os: Visual Studio 2015
+os: Visual Studio 2019
 
 clone_folder: c:\projects\tungsten
 
@@ -11,5 +11,19 @@ build:
   project: tungsten.sln
 
 before_build:
+  - vcpkg install zlib:x64-windows --recurse
+  - vcpkg install blosc:x64-windows --recurse
+  - vcpkg install openexr:x64-windows --recurse
+  - vcpkg install tbb:x64-windows --recurse
+  - vcpkg install boost-iostreams:x64-windows --recurse
+  - vcpkg install boost-system:x64-windows --recurse
+  - vcpkg install boost-any:x64-windows --recurse
+  - vcpkg install boost-algorithm:x64-windows --recurse
+  - vcpkg install boost-uuid:x64-windows --recurse
+  - vcpkg install boost-interprocess:x64-windows --recurse
+  - vcpkg install eigen3:x64-windows --recurse
+  - vcpkg install boost:x64-windows --recurse
+  - vcpkg install openexr:x64-windows --recurse
+  - vcpkg install openvdb:x64-windows --recurse
   - cd c:\projects\tungsten
-  - cmake -G "Visual Studio 12 2013 Win64" .
+  - cmake -DCMAKE_TOOLCHAIN_FILE=c:/tools/vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_TARGET_TRIPLET=x64-windows -A x64 -G "Visual Studio 16 2019 Win64" .
