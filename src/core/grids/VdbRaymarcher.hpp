@@ -5,6 +5,9 @@
 
 #include <openvdb/openvdb.h>
 #include <openvdb/math/DDA.h>
+#include <boost/mpl/apply.hpp>
+#include <boost/mpl/int.hpp>
+#include <boost/mpl/at.hpp>
 
 namespace Tungsten {
 
