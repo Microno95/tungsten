@@ -8,12 +8,10 @@ addons:
   apt:
     sources:
     - ubuntu-toolchain-r-test
-    - llvm-toolchain-precise-3.6
     packages:
     - gcc-8
     - g++-8
 before_install:
-    - sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa
     - sudo apt-get update -qq
     - sudo apt-get install -qq qtbase5-dev qt5-qmake libqt5opengl5-dev libeigen3-dev libjpeg-dev cmake libopenvdb-tools libopenvdb-dev libopenexr-dev
 install: true

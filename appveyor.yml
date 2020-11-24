@@ -26,4 +26,4 @@ before_build:
   - vcpkg install openexr:x64-windows --recurse
   - vcpkg install openvdb:x64-windows --recurse
   - cd c:\projects\tungsten
-  - cmake -DCMAKE_TOOLCHAIN_FILE=c:/tools/vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_TARGET_TRIPLET=x64-windows -A x64 -G "Visual Studio 16 2019 Win64" .
+  - cmake -DCMAKE_TOOLCHAIN_FILE=c:/tools/vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_TARGET_TRIPLET=x64-windows -A x64 -G "Visual Studio 16 2019" .
